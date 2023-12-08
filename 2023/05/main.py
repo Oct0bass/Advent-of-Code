@@ -7,6 +7,7 @@ class RangeMap:
         self.maps = sorted(maps, key=lambda m: m[1])
 
     def __getitem__(self, item: int | slice | range):
+        #incomplete attempt at range splitting, ignore this (I just brute-forced in for like 2 days)
         if isinstance(item, slice) or isinstance(item, range):
             result: [range] = []
             if item.start < self.maps[0][1]:
